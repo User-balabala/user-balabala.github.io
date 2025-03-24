@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/docs.css">
+    <title>Docs - Unift's Blog</title>
+    <link rel="icon" href="images/oc.ico" type="image/x-icon" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="color: aliceblue; font-family: 'Times New Roman', Times, serif;">Unift<span style="--text-stroke-color:aliceblue; color: transparent; -webkit-text-stroke: 1px var(--text-stroke-color);">'s Blog</span></h1>    
+            <ul>
+                <li>
+                    <a href="index.html">
+                        <button class="nav_button">
+                            <span>&nbsp;Index&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Index&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="blogs.html">
+                        <button class="nav_button">
+                            <span>&nbsp;Blog&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Blog&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="documents.html">
+                        <button class="nav_button_s">
+                            <span>&nbsp;Docs&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Docs&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="link.html">
+                        <button class="nav_button">
+                            <span>&nbsp;Link&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Link&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="me.html">
+                        <button class="nav_button">
+                            <span>&nbsp;Me&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Me&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Documents</h2>
+        <div class="docs">
+            <p>2021.9.24<span><a href="Document/格列弗游记戏剧.html" class="url"><strong>格列弗游记戏剧</strong></a></span></p>
+            <p>2025.3.24<span><a href="Document/已看动漫列表.html" class="url"><strong>已看动漫列表（持续更新ing）</strong></a></span></p>
+            <p>2025.3.24<span><a href="Document/ViewerJS测试网页.html" class="url"><strong>ViewerJS测试网页</strong></a></span></p>
+        </div>
+    </main>
+    <footer>
+        <button id="backToTopBtn" onclick="scrollToTop()"> </button>
+        <script>
+          window.onscroll = function() {scrollFunction()};
+           
+          function scrollFunction() {
+            if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+              document.getElementById("backToTopBtn").style.display = "block";
+            } else {
+              document.getElementById("backToTopBtn").style.display = "none";
+            }
+          } 
+          function scrollToTop() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+          }
+          </script>
+      </footer>
+</body>
+</html>
