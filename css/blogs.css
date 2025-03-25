@@ -19,7 +19,7 @@
   }
   /*#f1f4f9, #dff1ff*/
   section .color{
-    position: absolute;
+    position: fixed;
     filter: blur(150px);
   }
   
