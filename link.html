@@ -59,8 +59,33 @@
         <h2>Links</h2>
         <h3>Friends</h3>
         <p><a href="https://texas0295.top/" class="b">Texas0295's blog</a></p>
-        <h3>Search Engine</h3>
+        <h3>Website</h3>
         <p><a href="https://www.google.com" class="b">Google</a></p>
+        <p><a href="https://www.csdn.net" class="b">CSDN</a></p>
+        <h3>Tech Support</h3>
+        <p><a href="https://lenis.darkroom.engineering/" class="b">Lenis - smooth scroll</a></p>
+        <p><a href="https://www.jiejoe.com" class="b">JIEJOE_轻敲代码</a></p>
+        <p><a href="https://www.youtube.com/@OnlineTutorialsYT" class="b">Online Tutorials</a></p>
     </main>
+    <footter>
+        <p class="Thanks">Thank you to all the people and organizations who have helped to build this page.</p>
+    </footter>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+      <script>
+        // Initialize Lenis/ Customize
+        const lenis = new Lenis({
+            wrapper: window,
+            smoothwheel:true,
+            duration:1,
+            gestureOrientation: "vertical",
+            autoResize: true,
+        });
+        //Run
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        </script>
 </body>
 </html>

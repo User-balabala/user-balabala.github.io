@@ -35,5 +35,22 @@
         <h2>Word文档标准页面</h2>
         <p>以下添加文本内容</p>
     </main>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+      <script>
+        // Initialize Lenis/ Customize
+        const lenis = new Lenis({
+            wrapper: window,
+            smoothwheel:true,
+            duration:1,
+            gestureOrientation: "vertical",
+            autoResize: true,
+        });
+        //Run
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        </script>
 </body>
 </html>

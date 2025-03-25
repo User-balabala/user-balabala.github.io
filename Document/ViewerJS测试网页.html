@@ -35,5 +35,22 @@
         <h2>ViewerJS测试网页</h2>
         <iframe src = "/ViewerJS/#../Document/files/demodoc.pdf" width='viewport.width' height='800' allowfullscreen webkitallowfullscreen></iframe>
     </main>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+      <script>
+        // Initialize Lenis/ Customize
+        const lenis = new Lenis({
+            wrapper: window,
+            smoothwheel:true,
+            duration:1,
+            gestureOrientation: "vertical",
+            autoResize: true,
+        });
+        //Run
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        </script>
 </body>
 </html>

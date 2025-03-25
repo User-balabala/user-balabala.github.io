@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/blogs.css">
     <title>Blog - Unift's Blog</title>
+    <link rel="stylesheet" href="css/blogs.css">
     <link rel="icon" href="images/oc.ico" type="image/x-icon" />
 </head>
 <body>
@@ -55,32 +55,59 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <h2>Blogs</h2>
-        <div class="all">
-            <div class="2025">
-                <h3>Year 2025</h3>
-                <table class="blog">
-                    <tr>
-                        <td><a href="Blogs/2025.3.23.html" class="b"> 3.23 </a></td>
-                        <td><a href="Blogs/2025.3.24.html" class="b"> 3.24 </a></td>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                    </tr>
-                    <tr>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                        <td><a href="#" class="b"></a></td>
-                    </tr>
-                </table>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="container">
+                <div class="title">
+                    <h2>2025. 3. 25</h2>
+                </div>
+                <div class="passage">
+                    <p>
+                        建站第三天<br>
+                        今日重点：页面平滑移动，blog页面大改<br>
+                        终于也是完成了我一开始的设想<br>
+                        就是现在blog的样子，是一块一块连续的<br>
+                        lenis组件真好用，我觉得如果做网页的话各位都可以去试试<br>
+                    </p>
+                </div>
             </div>
-        </div>
-    </main>
-    <footer>
-        <button id="backToTopBtn" onclick="scrollToTop()"> </button>
+
+            <div class="container">
+                <div class="title">
+                    <h2>2025. 3. 24</h2>
+                </div>
+                <div class="passage">
+                    <p>依旧是我，今天是建站的第二天<br>
+                        还是我Unift，今天各位过的怎么样呢<br>
+                        今天做好了blog的部份<br>
+                        明天准备开始着手Me那块的制作<br>
+                        然后继续补更动漫列表<br>
+                        今天加到了友链了捏<br>
+                        Happy<br>
+                    </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="title">
+                    <h2>2025. 3. 23</h2>
+                </div>
+                <div class="passage">
+                    <p>你好你好，找到这个网站的好奇宝宝<br>
+                        我是Unift，祝你早上中文晚上好<br>
+                        Ad astra per aspera​ 穿越荆棘抵达星辰<br>
+                        从今天开始，我这项目会慢慢制作<br>
+                        希望我可以像上面那句话一样，<br>
+                        不畏这一路的艰险，抵达成功的彼岸呀<br>
+                        （好老套）<br>
+                    </p>
+                </div>
+            </div>
+    </section>
+    <button id="backToTopBtn" onclick="scrollToTop()"> </button>
         <script>
           window.onscroll = function() {scrollFunction()};
            
@@ -95,6 +122,21 @@
             window.scrollTo({top: 0, behavior: 'smooth'});
           }
           </script>
-      </footer>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+      <script>
+        // Initialize Lenis/ Customize
+        const lenis = new Lenis({
+            wrapper: window,
+            smoothwheel:true,
+            duration:1,
+
+        });
+        //Run
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        </script>
 </body>
 </html>
