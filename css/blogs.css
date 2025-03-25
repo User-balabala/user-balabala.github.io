@@ -11,6 +11,7 @@
   
   section{
     display: flex;
+    position: relative;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -263,4 +264,8 @@
   #backToTopBtn:hover{
     cursor: pointer;
     background-color: #44ffc7;
+  }
+
+  img{
+    border-radius: 10px;
   }

@@ -56,7 +56,35 @@
         </nav>
     </header>
     <main>
-        <h2>About me</h2>
+        <div class="typing-container">
+            <span id="typed-text"></span>
+            <span class="cursor">|</span>
+        </div>
+        <div class="sp">
+            <p class="self-a">
+                Hello, visitors to this blog, Welcome and nice to meet you.<br>
+                I'm Unift, author of this blog.<br>
+                I've always dreamed of building my own blog, and it finally comes true.<br>
+                If possible, I would also like to exchange blog links, <br>
+                and I will put your blog in the friends field of the link.<br>
+                I really want to make friends to you fortunate guys who discover this blog.<br>
+                Feel free to contact me via any contact way given below.<br>
+                P.S. If you're also intersted in this theme color, click here<br>
+            </p>
+            <span>
+                <img src="images/oc.ico" alt="profile photo">
+                <p class="self">
+                        Hello, visitors to this blog, Welcome and nice to meet you.<br>
+                        I'm Unift, author of this blog.<br>
+                        I've always dreamed of building my own blog, and it finally comes true.<br>
+                        If possible, I would also like to exchange blog links, <br>
+                        and I will put your blog in 'Friends' of the link page.<br>
+                        I really want to make friends to you fortunate guys who discover this blog.<br>
+                        Feel free to contact me via any <a  href="contact.html" class="aa">contact way</a>.<br>
+                        P.S. If you're also intersted in this theme color, <a  href="color.html" class="aa">click here</a>.<br>
+                </p>
+            </span>
+        </div>
         
     </main>
     <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
@@ -75,6 +103,35 @@
         requestAnimationFrame(raf);
         }
         requestAnimationFrame(raf);
+        </script>
+        <script>
+            //滚动字幕
+            const textArray = ["Ad astra per aspera","Hello","Welcome to my blog","Hallo","Willkommen auf meinem Blog"];
+            const typingspeed = 100;
+            const delayBetweenTexts = 1500;
+            let textIndex = 0;
+            let charIndex = 0;
+            const typedTextElement = document.getElementById("typed-text");
+            function typeText(){
+                if(charIndex < textArray[textIndex].length){
+                    typedTextElement.textContent += textArray[textIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(typeText,typingspeed);
+                }else{
+                    setTimeout(deleteText,delayBetweenTexts);
+                }
+            }
+            function deleteText(){
+                if(charIndex > 0){
+                    typedTextElement.textContent = textArray[textIndex].substring(0,charIndex - 1);
+                    charIndex--;
+                    setTimeout(deleteText,typingspeed/2);
+                }else{
+                    textIndex = (textIndex + 1) % textArray.length;
+                    setTimeout(typeText,typingspeed);
+                }
+            }
+            typeText()
         </script>
 </body>
 </html>
