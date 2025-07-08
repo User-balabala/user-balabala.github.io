@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="word_normal.css">
+    <title>Docs - Unift's Blog</title>
+    <link rel="icon" href="../images/oc.ico" type="image/x-icon" />
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 style="color: aliceblue; font-family: 'Times New Roman', Times, serif;">Unift<span style="--text-stroke-color:aliceblue; color: transparent; -webkit-text-stroke: 1px var(--text-stroke-color);">'s Blog</span></h1>    
+            <ul>
+                <li>
+                    <a href="../index.html">
+                        <button class="nav_button">
+                            <span>&nbsp;Index&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;Index&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+                <li>
+                    <a href="../documents.html">
+                        <button class="nav_button">
+                            <span>&nbsp;To&nbsp;List&nbsp;</span>
+                            <span aria-hidden="true" class="hovertext">&nbsp;To&nbsp;List&nbsp;</span>
+                        </button>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>世界之冬</h2>
+        <h3>2021/10/14</h3>
+        <p>
+            不能把世界的冬天和冬天的世界相等同。<br>
+            因为世界的冬天毫无人性。<br>
+            然而这世上真有人性否？<br>
+            人性是什么？<br>
+            只是仁慈吗？<br>
+            只是做大家都觉得合适的，合理的事吗？<br>
+            人性到底是什么？<br>
+            世界的冬天会否到来，<br>
+            还是我们身处其中却执迷不悟。<br>
+            冬日将至，何不点火驱寒？<br>
+            然而这寒是这一把小火所能驱的吗？<br>
+            它有心却无力，<br>
+            人有性却不用。<br>
+            人性为何？人性何在？<br>
+            世界的冬天，究竟还有多远。<br>
+            我看近在眼前，迫在眉睫。<br>
+            燃起令人温暖的火吧，<br>
+            用那些星星之火，暖和人们的身子<br>
+            燃起他们心中那早已熄灭的火。<br>
+            让世界不再有冬天！<br>
+            燃烧起来吧！<br>
+        </p>
+    </main>
+    <script src="https://unpkg.com/lenis@1.2.3/dist/lenis.min.js"></script> 
+      <script>
+        // Initialize Lenis/ Customize
+        const lenis = new Lenis({
+            wrapper: window,
+            smoothwheel:true,
+            duration:1,
+            gestureOrientation: "vertical",
+            autoResize: true,
+        });
+        //Run
+        function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+        </script>
+</body>
+</html>
